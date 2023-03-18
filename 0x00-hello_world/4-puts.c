@@ -2,9 +2,9 @@
 /**
  * main - Entry point
  *
- * Description: Programming is like building a multilingual puzzle'
+ * Description: to print Programming is like building a multilingual puzzle
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(void)
 {
