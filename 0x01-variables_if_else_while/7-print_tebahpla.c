@@ -10,7 +10,7 @@ int main(void)
 char aph[] = "abcdefghijklmnopqrstuvwxyz";
 int i;
 i = strlen(aph);
-for (i = 26; i >= 0; i--)
+for (i = 25; i >= 0; i--)
 {
 putchar(aph[i]);
 
