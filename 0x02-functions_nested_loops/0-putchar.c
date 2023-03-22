@@ -1,10 +1,9 @@
+#include "main.h"
 #include <stdio.h>
 /**
  * main - Entry point
- * 
  * Description:  'This prints _putchar followed by a new line'
- * 
- * Response: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
