@@ -24,7 +24,7 @@ for (i = 1; i <= 100; i++)
 	}
 	else
 	{
-		printf("%d ", i);
+		printf("%i ", i);
 	}
 }
 printf("\n");
