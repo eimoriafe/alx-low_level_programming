@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _puts - prints a string to the standard output.
- * @str: the string to be printed.
- * Return: void 
- */
+* _puts - prints a string to the standard output.
+* @str:the string to be printed.
+* Return: none
+*/
 void _puts(char *str)
 {
 int i = 0;
