@@ -1,27 +1,18 @@
 #include "main.h"
 /**
- * leet - encodes a string in 1337
- * @s: string to be encoded
- *
- * Return: the resulting string;
+ * print_chessboard - prints the chessboard
+ * @a: two dimension array to print
  */
-char *leet(char *s)
+void print_chessboard(char (*a)[8])
 {
 	int i, j;
 
-	char *a = "aAeEoOtTlL";
-	char *b = "4433007711";
-
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; i < 8; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; j < 8; j++)
 		{
-			if (s[i] == a[j])
-			{
-				s[i] = b[j];
-			}
+			_putchar(a[i][j]);
 		}
+		_putchar('\n');
 	}
-
-	return (s);
 }
