@@ -1,22 +1,15 @@
 #include "main.h"
 /**
- * _strncat - concatenates n number of characters
- * @dest: destination string.
- * @src: the source to be concatenated.
- * @n: the number of bytes of src to be concatenated.
+ * _memcpy - copies n bytes from memory area "src" to area "dest"
+ * @dest: mem area destination
+ * @src: mem area source
+ * @n: the number of bytes of src to copy from src.
  * Return: dest.
  */
-char *_strncat(char *dest, char *src, int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int len;
-	char *ptr;
-
-	for (len = 0; dest[len] != '\0'; len++)
-		;
-	ptr = dest + len;
-	while (*src != '\0' && n--)
-		*ptr++ = *src++;
-
-	*ptr = '\0';
-	return (dest);
+unsigned int i;
+for (i = 0; i < n; i++)
+dest[i] = src[i];
+return (dest);
 }

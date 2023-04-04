@@ -1,55 +1,60 @@
-0x05. C - Pointers, arrays and strings
+0x07. C - Even more pointers, arrays and strings
 
 Tasks
-0. 98 Battery st.
+0. memset
+Write a function that fills memory with a constant byte.
 
-Write a function that takes a pointer to an int as parameter and updates the value it points to to 98
+Prototype: char *_memset(char *s, char b, unsigned int n);
+The _memset() function fills the first n bytes of the memory area pointed to by s with the constant byte b
+Returns a pointer to the memory area s
 
-1. Don't swap horses in crossing a stream
+1. memcpy
+Write a function that copies memory area.
 
-Write a function that swaps the values of two integers.
+Prototype: char *_memcpy(char *dest, char *src, unsigned int n);
+The _memcpy() function copies n bytes from memory area src to memory area dest
+Returns a pointer to dest
 
-2. This report, by its very length, defends itself against the risk of being read
+2. strchr
+Write a function that locates a character in a string.
 
-Write a function that returns the length of a string.
+Prototype: char *_strchr(char *s, char c);
+Returns a pointer to the first occurrence of the character c in the string s, or NULL if the character is not found
 
-3. I do not fear computers. I fear the lack of them
+3. strspn
 
-Write a function that prints a string, followed by a new line, to stdout.
+Write a function that gets the length of a prefix substring.
 
-4. I can only go one way. I've not got a reverse gear
+Prototype: unsigned int _strspn(char *s, char *accept);
+Returns the number of bytes in the initial segment of s which consist only of bytes from accept
 
-Write a function that prints a string, in reverse, followed by a new line.
+4. strpbrk
 
-Prototype: void print_rev(char *s);
+Write a function that searches a string for any of a set of bytes.
 
+Prototype: char *_strpbrk(char *s, char *accept);
+The _strpbrk() function locates the first occurrence in the string s of any of the bytes in the string accept
+Returns a pointer to the byte in s that matches one of the bytes in accept, or NULL if no such byte is found
 
-5. A good engineer thinks in reverse and asks himself about the stylistic consequences of the components and systems he proposes
+5. strstr
 
-Write a function that reverses a string.
+Write a function that locates a substring.
 
+Prototype: char *_strstr(char *haystack, char *needle);
+The _strstr() function finds the first occurrence of the substring needle in the string haystack. The terminating null bytes (\0) are not compared
+Returns a pointer to the beginning of the located substring, or NULL if the substring is not found.
 
-6. Half the lies they tell about me aren't true
+6. Chess is mental torture
 
-Write a function that prints every other character of a string, starting with the first character, followed by a new line.
+Write a function that prints the chessboard.
 
-Prototype: void puts2(char *str);
+Prototype: void print_chessboard(char (*a)[8]);
 
-7. Winning is only half of it. Having fun is the other half
+7. The line of life is a ragged diagonal between duty and desire
 
-Write a function that prints half of a string, followed by a new line.
+Write a function that prints the sum of the two diagonals of a square matrix of integers.
 
-
-
-8. Arrays are not pointers
-
-Write a function that prints n elements of an array of integers, followed by a new line.
-
-Prototype: void print_array(int *a, int n);
-
-9. strcpy
-
-Prototype: char *_strcpy(char *dest, char *src);
-Write a function that copies the string pointed to by src, including the terminating null byte (\0), to the buffer pointed to by dest.
-
-Return value: the pointer to dest
+Prototype: void print_diagsums(int *a, int size);
+Format: see example
+You are allowed to use the standard library
+Note that in the following example we are casting an int[][] into an int*. This is not something you should do. The goal here is to make sure you understand how an array of array is stored in memory.
