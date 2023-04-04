@@ -1,21 +1,27 @@
 #include "main.h"
 /**
- * _strcmp - compares two strings
- * @s1: first string to compare
- * @s2: second string to compare
- * Return: less than 0 if s1 is less than s2, 0 if they're equal,
- * more than 0 if s1 is greater than s2
+ * _strspn - function to get length of prefix substring
+ * @s: string to be scanned
+ * @accept: string containing character to match
+ * Return:  the length of prefix substring
  */
-int _strcmp(char *s1, char *s2)
+unsigned int _strspn(char *s, char *accept)
 {
-	while (*s1 == *s2)
+int i, j, count, FLAG;
+
+	count = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*s1 == '\0')
-		{
-			return (0);
-		}
-		s1++;
-		s2++;
+		FLAG = 0;
+		for (j = 0; accept[j] != '\0'; j++)
+			if (s[i] == accept[j])
+			{
+				count++;
+				FLAG = 1;
+			}
+		if (FLAG == 0)
+			return (count);
 	}
-	return (*s1 - *s2);
+	return (0);
 }
