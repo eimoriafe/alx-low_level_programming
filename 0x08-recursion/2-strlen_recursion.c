@@ -1,24 +1,15 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * _strchr - locates character in string
- * @s: string to search
- * @c: character to look for.
- * Return: pointer to the first match of c in s
+ * _strlen_recursion - function to return the length of a string
+ * @s: string to check
+ * Return: length result
  */
-char *_strchr(char *s, char c)
+int _strlen_recursion(char *s)
 {
-int a;
-while (1)
-{
-a = *s++;
-if (a == c)
-{
-return (s - 1);
-}
-if (a == 0)
-{
-return (NULL);
-}
-}
+	int result;
+	if (*s == '\0')
+		return (0);
+	result = 1 + _strlen_recursion(s + 1);
+	return (result);
 }
