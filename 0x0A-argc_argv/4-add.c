@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- * main - entry point
+ * main - funtion to add two numbers
  * @argc: number of arguments
  * @argv: vector or pointer to array of string of argument
  * Return: 0  if no number, 1 if number contain non-digit symbols
