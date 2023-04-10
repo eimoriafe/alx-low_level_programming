@@ -9,19 +9,20 @@
  */
 int main(int argc, char *argv[])
 {
-int sum, i = 0;
-if (argc != 3)
-{
-printf("Error\n");
-return (1);
-}
-if (argc < 1)
-{
-printf("0\n");
-}
-for (i = 1; i < argc; i++)
-sum = sum + atoi(argv[i]);
-printf("%d\n", sum);
-
+int a, b, result = 0;
+	for (a = 1; a < argc; a++)
+	{
+		for (b = 0; argv[a][b] != '\0'; b++)
+		{
+			if (!isdigit(argv[a][b]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		result = result + atoi(argv[a]);
+	}
+printf("%d \n", result);
 return (0);
 }
+
