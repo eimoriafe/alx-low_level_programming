@@ -1,7 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
- * new_dog - entry point
+ * new_dog - creates new dog
  * @name: pet name
  * @age: pet age
  * @owner: owner of pet
